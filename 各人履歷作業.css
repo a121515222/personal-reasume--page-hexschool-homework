@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{font-family:微軟正黑體;}
+.content{
+    width: 1024px;
+    margin: 0 auto;
+    background:#fafafa;
+}
+.title_blue{
+color:#1736dc;
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+}
+.title_pink{
+    color:#fb56bf;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.header{
+    background: url(https://upload.cc/i1/2021/05/30/mAg1zH.png);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding:50px 0 40px 0 ;
+}
+.header ul{
+    padding: 0 300px 0 0;
+}
+.selfie_Name_and_tiele h2{
+font-size: 50px;
+text-align: center;
+margin: 20px 0 20px 0;
+}
+.selfie_Name_and_tiele h3{
+font-size: 14px;
+text-align: center;
+color:gray ;
+margin:10px 0 10px 0;    
+}
+.connect_info li{
+    padding-bottom: 15px;
+}
+.connect_info li{
+    display: flex;
+    align-items: center;
+}
+.connect_info li a{
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-size: 18px;   
+}
+.connect_info li a:hover{
+    color: red;
+}
+.Modern_Web_Skills{
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.Modern_Web_Skills li{
+    width: 320px;
+    border-radius:10px ;
+    border: rgb(211, 209, 209) 1px solid;
+    box-shadow: 0px 1px 1px gray;  
+    background: white;
+    position:relative;
+    overflow: hidden;  
+}
+.Modern_Web_Skills h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.Modern_Web_Skills h3{
+    margin: 5px 0px 5px 30px;
+    font-size: 12px;
+}
+.skillpicture{
+    
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spacebar{
+    margin-top: 40px;
+}
+.orange_bar{
+    height: 7px;
+    width: 320px;
+    position: absolute;
+    background: #f58d23;
+    bottom: 0px;
+}
+.green_bar{
+    height: 7px;
+    width: 320px;
+    position: absolute;
+    background: #539e43;
+    bottom: 0px;
+}
+.indigo_bar{
+    height: 7px;
+    width: 320px;
+    position: absolute;
+    background: #6762a6;
+    bottom: 0px; 
+}
+.Experience{/*需要與line_vertical同高*/
+    width: 1024px;
+    height: 700px;
+    position: relative;
+    margin: 30px 0 50px 0;
+}
+.line_vertical{
+    width: 5px;
+    height: 700px;/*需要與.Experience同高*/
+    border-right: 3px solid #d8d8d8;
+    position: absolute;
+    left:50%;
+    top:0px;
+    z-index:1;
+}
+.line_parallel{
+    width: 50px;
+    height: 1px;
+    border-bottom: 5px solid #d8d8d8;
+    position: absolute;
+    left:495px;
+    bottom: 0px;
+    z-index:1;
+}
+.hexpicturegray{
+    position: absolute;
+    left:503px;
+    top:0px;
+    z-index:2;
+}
+.hexlpicturepink1{
+    position: absolute;
+    left:507px;
+    top:15%;
+    z-index:3;
+}
+.hexlpicturepink2{
+    position: absolute;
+    left:507px;
+    top:40%;
+    z-index:3;
+}
+.hexlpicturepink3{
+    position: absolute;
+    left:507px;
+    top:65%;
+    z-index:3;
+}
+.Experience_card{/*共同屬性*/
+    width: 350px;
+    border:solid 1px #fb56bf;
+    border-radius: 5px;
+    position: absolute;
+    background: white;
+    padding:0 15px 0 15px;
+}
+.Experience_card3{
+    top: 15%;
+    left:55%;   
+}
+.Experience_card2{
+    top: 40%;
+    right:55%;
+    text-align: right;  
+}
+.Experience_card1{
+    top: 65%;
+    left:55%; 
+}
+.Experience_card h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding:10px 5px 10px 5px;
+}
+.Experience_card h4{
+    font-size: 22px;
+    font-weight: bold;
+    color:#8a1837;
+    padding:10px 5px 10px 5px;
+}
+.Experience_card h5{
+    color:#4a4a4a;
+    font-size: 20px;
+    padding:10px 5px 10px 5px;
+}
+.Experience_card p{
+    color:gray;
+    padding:10px 5px 10px 5px;
+}
+.worklist{
+    display:flex;
+    justify-content: space-around;
+    margin: 20px 0 30px 0;
+}
+.worklist a{
+    text-decoration: none;
+}
+.worklist li{
+    background: white;
+    border-radius: 5px;
+    border: transparent;
+    z-index: 1;
+}
+.workpicture{/*共同屬性*/
+    width: 300px;
+    height: 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: white;
+}
+.worklist li:hover{
+    box-shadow: 2px 2px 2px gray;
+}
+.worklist h3{
+    font-size: 18px;
+    font-weight: bold;
+    padding:10px;
+    color:black;
+}
+.worklist p{
+    color:gray;
+    padding:10px;
+}
+.workpicture1{
+    background: #fdb4e3;
+}
+.workpicture2{
+    background: #424242;
+}
+.workpicture3{
+    background:#8ad7fa;
+}
+.About_me{
+    margin:30px 0 30px 0 ;
+    padding:0 50px 0 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.About_me li{
+    padding:0 25px 0 25px;
+}
+.About_me p{
+    padding:20px 0 20px;
+}
+.About_me li img{
+    width: 300px;
+}
+.footer{
+    height: 87px;
+    background: url(https://upload.cc/i1/2021/05/30/KYIVUq.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer h2{
+    font-weight: bold;
+}
