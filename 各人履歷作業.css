@@ -65,16 +65,23 @@ text-align: center;
     text-align: center;
 }
 .header{
-    background: url(https://upload.cc/i1/2021/05/30/mAg1zH.png);
+    background: url(https://upload.cc/i1/2021/05/30/mAg1zH.png) no-repeat;
     display: flex;
-    justify-content: space-around;
     margin-bottom: 50px;
-    padding:50px 0 40px 0 ;
+    position: relative;
+    height: 350px;
 }
 .header ul{
-    padding: 0 300px 0 0;
+    position: absolute;
+    top:50px;
+    right:35%;
 }
-.selfie_Name_and_tiele h2{
+.selfie_Name_and_tiele{
+    position: absolute;
+    top:50px;
+    left:15%;
+}
+.selfie_Name_and_tiele h1{
 font-size: 50px;
 text-align: center;
 margin: 20px 0 20px 0;
@@ -106,7 +113,7 @@ margin:10px 0 10px 0;
     display: flex;
     justify-content: space-around;
 }
-.Modern_Web_Skills li{
+.Modern_Web_Skills_list{
     width: 320px;
     border-radius:10px ;
     border: rgb(211, 209, 209) 1px solid;
@@ -120,7 +127,10 @@ margin:10px 0 10px 0;
     font-size: 25px;
     margin-bottom: 15px;
 }
-.Modern_Web_Skills h3{
+.Modern_Web_Skills li ul{
+    padding-left:20px;
+}
+.Modern_Web_Skills li ul li{
     margin: 5px 0px 5px 30px;
     font-size: 12px;
 }
@@ -155,94 +165,97 @@ margin:10px 0 10px 0;
     background: #6762a6;
     bottom: 0px; 
 }
-.Experience{/*需要與line_vertical同高*/
-    width: 1024px;
-    height: 700px;
-    position: relative;
-    margin: 30px 0 50px 0;
+
+.Experience{
+position: relative;
+margin:30px 0 30px 0;
 }
-.line_vertical{
-    width: 5px;
-    height: 700px;/*需要與.Experience同高*/
-    border-right: 3px solid #d8d8d8;
+/*使用偽元素貼上灰色六角形與底部灰色線條*/
+/*灰色六角形*/
+.Experience::before{
     position: absolute;
-    left:50%;
-    top:0px;
-    z-index:1;
+    top:0;
+    right:48.5%;
+    content:url(https://upload.cc/i1/2021/05/30/ongqi0.png);
 }
-.line_parallel{
+/*灰色底線*/
+.Experience::after{
+    content:'';
+    height: 4px;
     width: 50px;
-    height: 1px;
-    border-bottom: 5px solid #d8d8d8;
+    background: #d8d8d8;
     position: absolute;
-    left:495px;
-    bottom: 0px;
-    z-index:1;
+    bottom:0;
+    right: 47.75%;
 }
-.hexpicturegray{
+
+.Experience_list{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    padding:40px 100px 10px 100px;
+}
+/*利用ul的偽元素增加直灰線*/
+.Experience_list::before{
     position: absolute;
-    left:503px;
     top:0px;
-    z-index:2;
+    right:50%;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: #d8d8d8;
+    
 }
-.hexlpicturepink1{
-    position: absolute;
-    left:507px;
-    top:15%;
-    z-index:3;
-}
-.hexlpicturepink2{
-    position: absolute;
-    left:507px;
-    top:40%;
-    z-index:3;
-}
-.hexlpicturepink3{
-    position: absolute;
-    left:507px;
-    top:65%;
-    z-index:3;
-}
-.Experience_card{/*共同屬性*/
-    width: 350px;
-    border:solid 1px #fb56bf;
+.Experience_list li{
+    border:1px solid #fb56bf;
     border-radius: 5px;
+    background:white;
+    width: 40%;
+    padding:20px;
+    margin:20px 0px 20px 0px;
+    position: relative;
+
+}
+
+/*使用nth-child()使li交錯左右排列*/
+.Experience_list li:nth-child(odd){
+align-self: flex-end;
+
+}
+.Experience_list li:nth-child(even){
+align-self: flex-start;
+
+text-align: right;
+}
+
+/*使用li偽元素加入粉色六角形*/
+.Experience_list li::before{
     position: absolute;
-    background: white;
-    padding:0 15px 0 15px;
+    content: url(https://upload.cc/i1/2021/05/30/eymrIu.png);
+    top:-10px;
 }
-.Experience_card3{
-    top: 15%;
-    left:55%;   
+/*使用*nth-child()使偽元素的六角形在中間*/
+.Experience_list li:nth-child(odd)::before{
+    left:-55px;
 }
-.Experience_card2{
-    top: 40%;
-    right:55%;
-    text-align: right;  
+.Experience_list li:nth-child(even)::before{
+    right:-53px;    
 }
-.Experience_card1{
-    top: 65%;
-    left:55%; 
+.Experience_list span{
+    padding:5px 0 5px 0 ;
 }
-.Experience_card h3{
-    font-size: 18px;
+.Experience_list h2{
+    color:#8e1f3d ;
+    padding:10px 0 10px;
+    font-size: 24px;
     font-weight: bold;
-    padding:10px 5px 10px 5px;
 }
-.Experience_card h4{
-    font-size: 22px;
-    font-weight: bold;
-    color:#8a1837;
-    padding:10px 5px 10px 5px;
-}
-.Experience_card h5{
-    color:#4a4a4a;
+.Experience_list h3{
     font-size: 20px;
-    padding:10px 5px 10px 5px;
+    padding:10px 0 10px;
 }
-.Experience_card p{
-    color:gray;
-    padding:10px 5px 10px 5px;
+.Experience_list p{
+    color:#a6a6a6;
 }
 .worklist{
     display:flex;
@@ -250,6 +263,7 @@ margin:10px 0 10px 0;
     margin: 20px 0 30px 0;
 }
 .worklist a{
+    display:block;
     text-decoration: none;
 }
 .worklist li{
@@ -297,22 +311,23 @@ margin:10px 0 10px 0;
     display: flex;
     justify-content: space-around;
 }
-.About_me li{
+.About_me_picture{
     padding:0 25px 0 25px;
 }
-.About_me p{
+.About_me_title{
     padding:20px 0 20px;
 }
-.About_me li img{
+.About_me_picture img{
     width: 300px;
 }
 .footer{
-    height: 87px;
-    background: url(https://upload.cc/i1/2021/05/30/KYIVUq.png);
+
+    background: url(https://upload.cc/i1/2021/05/30/KYIVUq.png) no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .footer h2{
     font-weight: bold;
+    padding:38px 0 38px 0;
 }
